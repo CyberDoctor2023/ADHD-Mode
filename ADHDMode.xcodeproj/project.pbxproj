@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0441421E2E543F6000A58BD8 /* OverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441421D2E543F5500A58BD8 /* OverlayController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		044142012E543CC700A58BD8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +31,41 @@
 		044141F22E543CC500A58BD8 /* ADHDMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADHDMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044142002E543CC700A58BD8 /* ADHDModeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADHDModeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0441420A2E543CC700A58BD8 /* ADHDModeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADHDModeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0441421D2E543F5500A58BD8 /* OverlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0441424C2E544B4600A58BD8 /* Exceptions for "ADHDMode" folder in "ADHDModeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				adhdtip.m4a,
+			);
+			target = 044141FF2E543CC700A58BD8 /* ADHDModeTests */;
+		};
+		0441424D2E544B4600A58BD8 /* Exceptions for "ADHDMode" folder in "ADHDModeUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				adhdtip.m4a,
+			);
+			target = 044142092E543CC700A58BD8 /* ADHDModeUITests */;
+		};
+		04EFA9B82E556B0800C96341 /* Exceptions for "ADHDMode" folder in "ADHDMode" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 044141F12E543CC500A58BD8 /* ADHDMode */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		044141F42E543CC500A58BD8 /* ADHDMode */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				04EFA9B82E556B0800C96341 /* Exceptions for "ADHDMode" folder in "ADHDMode" target */,
+				0441424C2E544B4600A58BD8 /* Exceptions for "ADHDMode" folder in "ADHDModeTests" target */,
+				0441424D2E544B4600A58BD8 /* Exceptions for "ADHDMode" folder in "ADHDModeUITests" target */,
+			);
 			path = ADHDMode;
 			sourceTree = "<group>";
 		};
@@ -43,6 +77,11 @@
 		0441420D2E543CC700A58BD8 /* ADHDModeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ADHDModeUITests;
+			sourceTree = "<group>";
+		};
+		0441422A2E54467300A58BD8 /* Resource */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,10 +114,12 @@
 		044141E92E543CC500A58BD8 = {
 			isa = PBXGroup;
 			children = (
+				0441421D2E543F5500A58BD8 /* OverlayController.swift */,
 				044141F42E543CC500A58BD8 /* ADHDMode */,
 				044142032E543CC700A58BD8 /* ADHDModeTests */,
 				0441420D2E543CC700A58BD8 /* ADHDModeUITests */,
 				044141F32E543CC500A58BD8 /* Products */,
+				0441422A2E54467300A58BD8 /* Resource */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +150,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				044141F42E543CC500A58BD8 /* ADHDMode */,
+				0441422A2E54467300A58BD8 /* Resource */,
 			);
 			name = ADHDMode;
 			packageProductDependencies = (
@@ -236,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441421E2E543F6000A58BD8 /* OverlayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +441,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ADHDMode/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,6 +468,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ADHDMode/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
