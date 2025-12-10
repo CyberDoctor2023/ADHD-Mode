@@ -21,6 +21,7 @@
 </p>
 
 <br>
+<img width="2244" height="650" alt="image" src="https://github.com/user-attachments/assets/7ef11364-dcd0-4fac-9ac9-dd9793ffac46" />
 
 ## <span id="english">Features</span> / <span id="中文">功能特性</span>
 
