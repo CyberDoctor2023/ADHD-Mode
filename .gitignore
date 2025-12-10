@@ -24,3 +24,5 @@ DerivedData/
 /_
 # CocoaPods
 Pods/
+
+*.dmg
