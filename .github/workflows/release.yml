@@ -1,0 +1,46 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build macOS App
+    runs-on: macos-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build App
+        run: |
+          xcodebuild -scheme ADHDMode \
+            -configuration Release \
+            -derivedDataPath build \
+            clean build \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
+
+      - name: Prepare DMG Content
+        run: |
+          mkdir -p dmg_content
+          # Copy the built app
+          cp -R build/Build/Products/Release/ADHDMode.app dmg_content/
+          # Copy the help text
+          cp "提示_已损坏怎么办.txt" dmg_content/
+          # Create a symlink to Applications folder
+          ln -s /Applications dmg_content/Applications
+
+      - name: Create DMG
+        run: |
+          hdiutil create -volname "ADHDMode" -srcfolder dmg_content -ov -format UDZO ADHDMode.dmg
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ADHDMode.dmg
+          generate_release_notes: true
